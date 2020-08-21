@@ -53,11 +53,19 @@ LV_IMG_DECLARE(custom_bg)
 void gui_setup(void)
 {
     //Create wallpaper
+<<<<<<< HEAD
     lv_obj_t *img_bin = lv_img_create( lv_scr_act() , NULL );
     lv_img_set_src( img_bin, &custom_bg );
     lv_obj_set_width( img_bin, lv_disp_get_hor_res( NULL ) );
     lv_obj_set_height( img_bin, lv_disp_get_ver_res( NULL ) );
     lv_obj_align( img_bin, NULL, LV_ALIGN_CENTER, 0, 0 );
+=======
+    lv_obj_t *img_bin = lv_img_create( lv_scr_act() , NULL);  /*Create an image object*/
+    lv_img_set_src(img_bin, &custom_bg );
+    lv_obj_set_width( img_bin, hres );
+    lv_obj_set_height( img_bin, vres );
+    lv_obj_align(img_bin, NULL, LV_ALIGN_CENTER, 0, 0);
+>>>>>>> 	new file:   src/app/music/images/music_app_48px.c
 
     mainbar_setup();
     /* add the four mainbar screens */
