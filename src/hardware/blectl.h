@@ -90,5 +90,7 @@
     bool blectl_get_advertising( void );
     void blectl_save_config( void );
     void blectl_read_config( void );
-
+   // adding my music playing function
+    void ble_send_command ( String musicCommand );
+	
 #endif // _BLECTL_H

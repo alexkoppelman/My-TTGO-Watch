@@ -434,3 +434,19 @@ void blectl_read_config( void ) {
         file.close();
     }
 }
+
+void ble_send_command(String musicCommand){
+    log_i("Play clicked");
+    
+    // char jsonString[]  = "{t:\"music\",n:\"play\"}";
+    char* jsonString = (char*)"{t:\"music\",n:\"play\"}";
+
+    char *arr_ptr = &jsonString[0];
+
+    // char a_str[] = "hello";//{h,e,l,l,o,\0}
+    
+    // printf("Get length of string -> %d\n", strlen(arr_ptr));
+
+    pTxCharacteristic->setValue(jsonString); // Set value.
+    pTxCharacteristic->notify();                // Notify value.
+}
