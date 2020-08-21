@@ -124,4 +124,7 @@
     
     void blectl_update_battery( int32_t percent, bool charging, bool plug );
 
+   // adding my music playing function
+    void ble_send_command ( String musicCommand );
+	
 #endif // _BLECTL_H
