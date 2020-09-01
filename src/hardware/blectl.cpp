@@ -481,22 +481,6 @@ void blectl_read_config( void ) {
     }
 }
 
-void ble_send_command(String musicCommand){
-    log_i("Play clicked");
-    
-    // char jsonString[]  = "{t:\"music\",n:\"play\"}";
-    char* jsonString = (char*)"{t:\"music\",n:\"play\"}";
-
-    char *arr_ptr = &jsonString[0];
-
-    // char a_str[] = "hello";//{h,e,l,l,o,\0}
-    
-    // printf("Get length of string -> %d\n", strlen(arr_ptr));
-
-    pTxCharacteristic->setValue(jsonString); // Set value.
-    pTxCharacteristic->notify();                // Notify value.
-}
-
 void blectl_update_battery( int32_t percent, bool charging, bool plug )
 {
     uint8_t level = (uint8_t)percent;
@@ -511,4 +495,21 @@ void blectl_update_battery( int32_t percent, bool charging, bool plug )
         (percent > 10 ? BATTERY_POWER_STATE_LEVEL_GOOD : BATTERY_POWER_STATE_LEVEL_CRITICALLY_LOW );
     pBatteryPowerStateCharacteristic->setValue(&batteryPowerState, 1);
     pBatteryPowerStateCharacteristic->notify();
+}
+
+void ble_send_command(String musicCommand)
+{
+    log_i("Play clicked");
+    
+    // char jsonString[]  = "{t:\"music\",n:\"play\"}";
+    char* jsonString = (char*)"{t:\"music\",n:\"play\"}";
+
+    char *arr_ptr = &jsonString[0];
+
+    // char a_str[] = "hello";//{h,e,l,l,o,\0}
+    
+    // printf("Get length of string -> %d\n", strlen(arr_ptr));
+
+    pTxCharacteristic->setValue(jsonString); // Set value.
+    pTxCharacteristic->notify();                // Notify value.
 }
