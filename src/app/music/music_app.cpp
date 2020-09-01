@@ -160,5 +160,9 @@ void music_app_hide_widget_icon_info( bool show ) {
 
     lv_obj_set_hidden( music_app_widget_icon_info, show );
     lv_obj_invalidate( lv_scr_act() );
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> 3cf933fff1a956402d254772973f7886e35e0d20
