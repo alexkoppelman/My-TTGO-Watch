@@ -136,7 +136,7 @@ static void start_music_app_main_event_cb( lv_obj_t * obj, lv_event_t event ) {
     switch( event ) {
         case( LV_EVENT_CLICKED ):       // Send PLAY Message
                                         log_i("Play clicked");
-                                        char* musicCommand = "play";
+                                        String musicCommand = "play";
                                         ble_send_command(musicCommand);              // Notify value.
                                         break;
     }
@@ -146,7 +146,7 @@ static void stop_music_app_main_event_cb( lv_obj_t * obj, lv_event_t event ) {
     switch( event ) {
         case( LV_EVENT_CLICKED ):       // create an task that runs every secound
                                         log_i("Pause clicked");
-                                        char* musicCommand = "pause";
+                                        String musicCommand = "pause";
                                         ble_send_command(musicCommand); 
                                         break;
     }
@@ -156,7 +156,7 @@ static void reset_music_app_main_event_cb( lv_obj_t * obj, lv_event_t event ) {
     switch( event ) {
         case( LV_EVENT_CLICKED ):       // Send Pause command 
                                         log_i("Stop clicked");
-                                        char* musicCommand = "stop";
+                                        String musicCommand = "stop";
                                         ble_send_command(musicCommand); 
                                         break;
     }
