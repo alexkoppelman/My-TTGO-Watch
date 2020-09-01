@@ -486,6 +486,10 @@ void blectl_update_battery( int32_t percent, bool charging, bool plug )
     pBatteryPowerStateCharacteristic->setValue(&batteryPowerState, 1);
     pBatteryPowerStateCharacteristic->notify();
 void ble_send_command(String musicCommand){
+}
+
+void ble_send_command(String musicCommand)
+{
     log_i("Play clicked");
     
     // char jsonString[]  = "{t:\"music\",n:\"play\"}";
