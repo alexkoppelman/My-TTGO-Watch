@@ -26,10 +26,13 @@
 
     void music_app_main_setup( uint32_t tile_num );
 <<<<<<< HEAD
+<<<<<<< HEAD
        // adding my music playing function
     void ble_send_command ( String musicCommand );
     
 =======
 
 >>>>>>> 	new file:   src/app/music/images/music_app_48px.c
+=======
+>>>>>>> 	modified:   src/app/music/music_app.cpp
 #endif // _music_APP_MAIN_H

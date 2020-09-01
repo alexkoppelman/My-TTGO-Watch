@@ -30,10 +30,12 @@
 #include "gui/mainbar/mainbar.h"
 #include "gui/statusbar.h"
 #include "hardware/blectl.h"
-<<<<<<< HEAD
 #include "hardware/blectl.cpp"
+<<<<<<< HEAD
 =======
 >>>>>>> 	new file:   src/app/music/images/music_app_48px.c
+=======
+>>>>>>> 	modified:   src/app/music/music_app.cpp
 
 long music_milliseconds = 0;
 time_t prevs_time;
@@ -140,7 +142,12 @@ static void start_music_app_main_event_cb( lv_obj_t * obj, lv_event_t event ) {
     switch( event ) {
         case( LV_EVENT_CLICKED ):       // Send PLAY Message
                                         log_i("Play clicked");
+<<<<<<< HEAD
                                         char* musicCommand = "play";
+=======
+                                        
+                                        String musicCommand = "play";
+>>>>>>> 	modified:   src/app/music/music_app.cpp
                                         ble_send_command(musicCommand);              // Notify value.
                                         break;
     }
@@ -150,7 +157,12 @@ static void stop_music_app_main_event_cb( lv_obj_t * obj, lv_event_t event ) {
     switch( event ) {
         case( LV_EVENT_CLICKED ):       // create an task that runs every secound
                                         log_i("Pause clicked");
+<<<<<<< HEAD
                                         char* musicCommand = "pause";
+=======
+                                        
+                                        String musicCommand = "pause";
+>>>>>>> 	modified:   src/app/music/music_app.cpp
                                         ble_send_command(musicCommand); 
                                         break;
     }
@@ -160,7 +172,12 @@ static void reset_music_app_main_event_cb( lv_obj_t * obj, lv_event_t event ) {
     switch( event ) {
         case( LV_EVENT_CLICKED ):       // Send Pause command 
                                         log_i("Stop clicked");
+<<<<<<< HEAD
                                         char* musicCommand = "stop";
+=======
+                                        
+                                        String musicCommand = "stop";
+>>>>>>> 	modified:   src/app/music/music_app.cpp
                                         ble_send_command(musicCommand); 
                                         break;
     }
@@ -172,18 +189,26 @@ static void exit_music_app_main_event_cb( lv_obj_t * obj, lv_event_t event ) {
         case( LV_EVENT_CLICKED ):       mainbar_jump_to_maintile( LV_ANIM_OFF );
                                         break;
     }
-<<<<<<< HEAD
 }
 
-void ble_send_command(){
+void ble_send_command(String musicCommand)
+{
     log_i("Play clicked");
-
+    
+    // char jsonString[]  = "{t:\"music\",n:\"play\"}";
     char* jsonString = (char*)"{t:\"music\",n:\"play\"}";
 
     char *arr_ptr = &jsonString[0];
 
+    // char a_str[] = "hello";//{h,e,l,l,o,\0}
+    
+    // printf("Get length of string -> %d\n", strlen(arr_ptr));
+
     pTxCharacteristic->setValue(jsonString); // Set value.
     pTxCharacteristic->notify();                // Notify value.
+<<<<<<< HEAD
 =======
 >>>>>>> 	new file:   src/app/music/images/music_app_48px.c
+=======
+>>>>>>> 	modified:   src/app/music/music_app.cpp
 }

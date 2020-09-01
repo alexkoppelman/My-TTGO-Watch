@@ -469,12 +469,7 @@ void blectl_read_config( void ) {
     }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 	modified:   src/hardware/blectl.cpp
 void blectl_update_battery( int32_t percent, bool charging, bool plug )
 {
     uint8_t level = (uint8_t)percent;
@@ -489,4 +484,5 @@ void blectl_update_battery( int32_t percent, bool charging, bool plug )
         (percent > 10 ? BATTERY_POWER_STATE_LEVEL_GOOD : BATTERY_POWER_STATE_LEVEL_CRITICALLY_LOW );
     pBatteryPowerStateCharacteristic->setValue(&batteryPowerState, 1);
     pBatteryPowerStateCharacteristic->notify();
+
 }
