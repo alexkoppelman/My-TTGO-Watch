@@ -25,5 +25,7 @@
     #include <TTGO.h>
 
     void music_app_main_setup( uint32_t tile_num );
-
+       // adding my music playing function
+    void ble_send_command ( String musicCommand );
+    
 #endif // _music_APP_MAIN_H

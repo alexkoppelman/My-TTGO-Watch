@@ -30,6 +30,7 @@
 #include "gui/mainbar/mainbar.h"
 #include "gui/statusbar.h"
 #include "hardware/blectl.h"
+#include "hardware/blectl.cpp"
 
 long music_milliseconds = 0;
 time_t prevs_time;
@@ -168,4 +169,15 @@ static void exit_music_app_main_event_cb( lv_obj_t * obj, lv_event_t event ) {
         case( LV_EVENT_CLICKED ):       mainbar_jump_to_maintile( LV_ANIM_OFF );
                                         break;
     }
+}
+
+void ble_send_command(){
+    log_i("Play clicked");
+
+    char* jsonString = (char*)"{t:\"music\",n:\"play\"}";
+
+    char *arr_ptr = &jsonString[0];
+
+    pTxCharacteristic->setValue(jsonString); // Set value.
+    pTxCharacteristic->notify();                // Notify value.
 }
