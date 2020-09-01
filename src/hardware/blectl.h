@@ -121,9 +121,21 @@
     bool blectl_get_advertising( void );
     void blectl_save_config( void );
     void blectl_read_config( void );
+<<<<<<< HEAD
     
+=======
+   // adding my music playing function
+    void ble_send_command ( String musicCommand );
+	
+
+>>>>>>> 3cf933fff1a956402d254772973f7886e35e0d20
     void blectl_update_battery( int32_t percent, bool charging, bool plug );
 
+<<<<<<< HEAD
 
+=======
+   // adding my music playing function
+    void ble_send_command ( String musicCommand );
+>>>>>>> db01eb80aa7d055f4bef923f51275122d26db187
 	
 #endif // _BLECTL_H

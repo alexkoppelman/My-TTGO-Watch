@@ -42,9 +42,14 @@
 #include "app/crypto_ticker/crypto_ticker.h"
 #include "app/example_app/example_app.h"
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "app/osmand/osmand_app.h"
 =======
 >>>>>>> 	new file:   src/app/music/images/music_app_48px.c
+=======
+#include "app/music/music_app.h"
+#include "app/osmand/osmand_app.h"
+>>>>>>> db01eb80aa7d055f4bef923f51275122d26db187
 #include "app/music/music_app.h"
 
 TTGOClass *ttgo = TTGOClass::getWatch();
@@ -88,9 +93,14 @@ void setup()
     crypto_ticker_setup();
     example_app_setup();
 <<<<<<< HEAD
+<<<<<<< HEAD
     osmand_app_setup();
 =======
 >>>>>>> 	new file:   src/app/music/images/music_app_48px.c
+=======
+    music_app_setup();
+    osmand_app_setup();
+>>>>>>> db01eb80aa7d055f4bef923f51275122d26db187
     music_app_setup();
     /*
      *

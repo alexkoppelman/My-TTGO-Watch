@@ -30,12 +30,19 @@
 #include "gui/mainbar/mainbar.h"
 #include "gui/statusbar.h"
 #include "hardware/blectl.h"
+<<<<<<< HEAD
 #include "hardware/blectl.cpp"
 <<<<<<< HEAD
 =======
 >>>>>>> 	new file:   src/app/music/images/music_app_48px.c
 =======
 >>>>>>> 	modified:   src/app/music/music_app.cpp
+=======
+<<<<<<< HEAD
+#include "hardware/blectl.cpp"
+=======
+>>>>>>> 3cf933fff1a956402d254772973f7886e35e0d20
+>>>>>>> db01eb80aa7d055f4bef923f51275122d26db187
 
 long music_milliseconds = 0;
 time_t prevs_time;
@@ -145,9 +152,14 @@ static void start_music_app_main_event_cb( lv_obj_t * obj, lv_event_t event ) {
 <<<<<<< HEAD
                                         char* musicCommand = "play";
 =======
+<<<<<<< HEAD
                                         
                                         String musicCommand = "play";
 >>>>>>> 	modified:   src/app/music/music_app.cpp
+=======
+                                        String musicCommand = "play";
+>>>>>>> 3cf933fff1a956402d254772973f7886e35e0d20
+>>>>>>> db01eb80aa7d055f4bef923f51275122d26db187
                                         ble_send_command(musicCommand);              // Notify value.
                                         break;
     }
@@ -160,9 +172,14 @@ static void stop_music_app_main_event_cb( lv_obj_t * obj, lv_event_t event ) {
 <<<<<<< HEAD
                                         char* musicCommand = "pause";
 =======
+<<<<<<< HEAD
                                         
                                         String musicCommand = "pause";
 >>>>>>> 	modified:   src/app/music/music_app.cpp
+=======
+                                        String musicCommand = "pause";
+>>>>>>> 3cf933fff1a956402d254772973f7886e35e0d20
+>>>>>>> db01eb80aa7d055f4bef923f51275122d26db187
                                         ble_send_command(musicCommand); 
                                         break;
     }
@@ -175,9 +192,14 @@ static void reset_music_app_main_event_cb( lv_obj_t * obj, lv_event_t event ) {
 <<<<<<< HEAD
                                         char* musicCommand = "stop";
 =======
+<<<<<<< HEAD
                                         
                                         String musicCommand = "stop";
 >>>>>>> 	modified:   src/app/music/music_app.cpp
+=======
+                                        String musicCommand = "stop";
+>>>>>>> 3cf933fff1a956402d254772973f7886e35e0d20
+>>>>>>> db01eb80aa7d055f4bef923f51275122d26db187
                                         ble_send_command(musicCommand); 
                                         break;
     }
@@ -189,6 +211,7 @@ static void exit_music_app_main_event_cb( lv_obj_t * obj, lv_event_t event ) {
         case( LV_EVENT_CLICKED ):       mainbar_jump_to_maintile( LV_ANIM_OFF );
                                         break;
     }
+<<<<<<< HEAD
 }
 
 void ble_send_command(String musicCommand)
@@ -196,10 +219,19 @@ void ble_send_command(String musicCommand)
     log_i("Play clicked");
     
     // char jsonString[]  = "{t:\"music\",n:\"play\"}";
+=======
+<<<<<<< HEAD
+}
+
+void ble_send_command(){
+    log_i("Play clicked");
+
+>>>>>>> db01eb80aa7d055f4bef923f51275122d26db187
     char* jsonString = (char*)"{t:\"music\",n:\"play\"}";
 
     char *arr_ptr = &jsonString[0];
 
+<<<<<<< HEAD
     // char a_str[] = "hello";//{h,e,l,l,o,\0}
     
     // printf("Get length of string -> %d\n", strlen(arr_ptr));
@@ -211,4 +243,10 @@ void ble_send_command(String musicCommand)
 >>>>>>> 	new file:   src/app/music/images/music_app_48px.c
 =======
 >>>>>>> 	modified:   src/app/music/music_app.cpp
+=======
+    pTxCharacteristic->setValue(jsonString); // Set value.
+    pTxCharacteristic->notify();                // Notify value.
+=======
+>>>>>>> 3cf933fff1a956402d254772973f7886e35e0d20
+>>>>>>> db01eb80aa7d055f4bef923f51275122d26db187
 }

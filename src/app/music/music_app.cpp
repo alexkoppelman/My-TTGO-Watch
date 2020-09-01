@@ -160,6 +160,7 @@ void music_app_hide_widget_icon_info( bool show ) {
 
     lv_obj_set_hidden( music_app_widget_icon_info, show );
     lv_obj_invalidate( lv_scr_act() );
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 
@@ -168,3 +169,11 @@ void music_app_hide_widget_icon_info( bool show ) {
 >>>>>>> 	new file:   src/app/music/images/music_app_48px.c
 =======
 >>>>>>> 	modified:   src/app/music/music_app.cpp
+=======
+<<<<<<< HEAD
+}
+
+=======
+}
+>>>>>>> 3cf933fff1a956402d254772973f7886e35e0d20
+>>>>>>> db01eb80aa7d055f4bef923f51275122d26db187
